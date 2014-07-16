@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forest market login</title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+<link href="./assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="./assets/common/custom-bootstrap.css" rel="stylesheet" />
+<script type="text/javascript" src="./assets/lib/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default " role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./login.html">Forest Market</a>
+				<span class="text-warning">Vue opérateur de travaux forestiers</span>
+				
+				<ul class="nav navbar-nav ">
+          <li>
+            <div class="btn-group navbar-form">
+              <button type="button" class="btn btn-default active"><span class="glyphicon glyphicon-tree-conifer"></span></button>
+              <button type="button" class="btn btn-default "><span class="glyphicon glyphicon-road"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-picture"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-large"></span></button>
+            </div>
+          </li>
+				</ul>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><form class="navbar-form navbar-left">
+						<button type="submit" class="btn btn-default">Quitter</button>
+					</form></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a href="oper-dashboard-main.html"><span
+					class="glyphicon glyphicon-home"></span></a></li>
+			<li><a href="oper-market.html">Marché</a></li>
+			<li><a href="#">Réseau</a></li>
+			<li><a href="#">Profil</a></li>
+		</ul>
+		<div class="row">
+			<div class="col-lg-8">
+				<h2>Sommaires des activités en cours</h2>
+				<div class="panel panel-default">
+					<div class="panel-heading">Enchères</div>
+
+					<table class="table">
+					 <tr><th>Période</th><th>Titre</th><th>Intégrateur</th><th>Status</th><th>Votre mise</th><th>Vendu</th><th>Action</th></tr>
+					 <tr class="bg-success"><td>27 au 29</td><td><a href="#">Récolte de bois</a></td><td>Intégrateur3 inc.</td><td class="text-success">Gagnant</td><td>25 000$</td><td>25 000$</td><td><button class="btn btn-xs btn-success btn-block">Conclure</button></td></tr>
+					 <tr class="bg-danger"><td>22 au 4 avril</td><td><a href="#">Récolte de bois</a></td><td>Intégrateur2 inc.</td><td>Perdu</td><td>225 000$</td><td>198 000$</td><td><button class="btn btn-xs btn-danger btn-block">Cacher</button></td></tr>
+					 <tr><td>15 au 25</td><td><a href="#">Récolte de bois</a></td><td>Intégrateur1 inc.</td><td>En cours</td><td>25 000$</td><td>-</td><td></td></tr>
+					</table>
+				</div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Offres reçues</div>
+          <table class="table">
+           <tr><th>Période</th><th>Titre</th><th>Intégrateur</th><th>Status</th><th>Prix</th><th>Action</th></tr>
+           <tr><td>19 au 22</td><td><a href="#">Récolte de bois</a></td><td>Garneau et fils.</td><td>Acceptée</td><td>12 000$</td><td></td></tr>
+           <tr><td>15 au 25</td><td><a href="#">Récolte de bois</a></td><td>Garneau et fils.</td><td>Offre</td><td>15 000$</td>
+           <td>
+            <div class="btn-group btn-block">
+              <button type="button" class="btn btn-block btn-xs dropdown-toggle btn-success " data-toggle="dropdown">
+                Action <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Accepter</a></li>
+                <li><a href="#">Refuser</a></li>
+              </ul>
+            </div>
+              </td></tr>
+           <tr class="bg-danger"><td>2 au 19</td><td><a href="#">Récolte de bois</a></td><td>Garneau et fils.</td><td>19 000$</td><td>Déclinée</td><td><button class="btn btn-xs btn-danger btn-block">Cacher</button></td></tr>
+          </table>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Mes annonces</div>
+
+          <table class="table">
+           <tr><th>Période</th><th>Titre</th><th>Intégrateur</th><th>Status</th><th>Prix offert</th><th>Action</th></tr>
+           <tr><td>1 au 25</td><td><a href="#">Récolte de bois</a></td><td>-</td><td>En cours</td><td>3 000$ / jours </td><td>
+            <div class="btn-group btn-block">
+						  <button type="button" class="btn btn-xs dropdown-toggle btn-success  btn-block" data-toggle="dropdown">
+						    Action <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu">
+						    <li><a href="#">Terminer</a></li>
+						    <li><a href="#">Annuler</a></li>
+						    <li><a href="#">Copier</a></li>
+						  </ul>
+						</div>
+           </td></tr>
+          </table>
+        </div>
+
+				<ul class="pagination">
+				  <li><a href="#">&laquo;</a></li>
+				  <li><a href="#">1</a></li>
+				  <li><a href="#">2</a></li>
+				  <li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-lg-4">
+				<h2>Actualité</h2>
+				<div class="media">
+					<a class="pull-left" href="#"> 
+					 <img class="media-object" src="./assets/images/bowwater-64.png"></a>
+					 <div class="media-body">
+					 <p><a href="#">La Coop forestière du Haut St-Maurice</a></p>
+					 <p>Secteur : <a href="#">La tuque</a></p>
+					 <p>Recherche un entrepreneur pour la récolte de bois en longueur. 
+					 Travail garanti en 2014-15 dans la région La Tuque. 
+					 Hébergement en camp forestier. </p>
+					</div>
+				</div>
+        <div class="media">
+          <a class="pull-left" href="#"> 
+           <img class="media-object" src="./assets/images/michel-64.png"></a>
+           <div class="media-body">
+           <p><a href="#">Michel Baubiens</a> vous a laissé un message</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+           Donec a diam lectus. Sed sit amet ipsum mauris.</p>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

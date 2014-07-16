@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forest market login</title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+<script src="./assets/lib/openlayer/OpenLayers.light.js"></script>
+<link href="./assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="./assets/common/custom-bootstrap.css" rel="stylesheet" />
+<script type="text/javascript" src="./assets/lib/bootstrap/js/bootstrap.js"></script>
+
+  <script>
+      function init() {
+        map = new OpenLayers.Map("basicMap");
+        var mapnik         = new OpenLayers.Layer.OSM();
+        var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+        var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+        var position       = new OpenLayers.LonLat( -72.7838, 47.434).transform( fromProjection, toProjection);
+        var zoom           = 10; 
+ 
+        map.addLayer(mapnik);
+        map.setCenter(position, zoom );
+      }
+    </script>
+
+</head>
+<body onload="init();">
+  <nav class="navbar navbar-default " role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span> <span
+            class="icon-bar"></span>
+        </button>
+          <a class="navbar-brand" href="./login.html">Forest Market</a>
+          <span class="text-warning">Vue intégrateur</span>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><form class="navbar-form navbar-left">
+            <button type="submit" class="btn btn-default">Quitter</button>
+          </form></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+      <li><a href="intr-dashboard.html"><span
+          class="glyphicon glyphicon-home"></span></a></li>
+      <li class="active"><a href="intr-projet.html">Projets</a>
+      <li><a href="#">Marché</a></li>
+      <li><a href="#">Réseau</a></li>
+      <li><a href="#">Profil</a></li>
+    </ul>
+    <div class="row">
+      <div class="col-lg-2">
+        <h2>Projets</h2>
+
+					<div class="input-group">
+						<input type="text" class="form-control"><span
+							class="input-group-btn">
+							<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+						</span>
+					</div>
+          <hr/>
+				  <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">Projet C220 - Secteur La tuque</a></li>
+            <li><a href="#">Projet C223 - Secteur Saguenay</a></li>
+          </ul>
+      </div>
+    
+      <div class="col-lg-10">
+        <h2>Projet C220 - Secteur <a href="#">La tuque</a></h2>
+        
+        <div id="basicMap" style="height:200px;"></div>
+        
+        
+        <h3>Foresterie</h3>
+        <p>
+        Les couleurs des graphiques ci-dessous indiquent le niveau d'assurance
+        de réalisation des contrats. Par exemple, dans la section voirie, un
+        détail de projet (en vert) à de bonne chances de se concrétiser, le 
+        second projet (en jaune) est à risque.
+        </p>
+        
+        <p>
+        Il est possible aussi d'ouvrir les sections pour avoir plus de détails.
+        La section paysagement à été ouverte pour démontrer qu'à l'intérieur il
+        est possible de voir que le reboisement n'a pas encore trouvé
+        d'opérateur de services forestiers ce qui explique la section rouge de
+        la barre de progression.
+        </p>
+        
+        <div class="panel panel-default">
+          <table class="table">
+           <tr><th></th><th>Sous-projets</th><th>Progression contrats</th><th>Total</th></tr>
+           
+           <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Voirie</a></td>
+            <td><div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 50%">1
+                  </div>
+                  <div class="progress-bar progress-bar-warning" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 50%">1
+                  </div>
+                </div>
+            </td>
+            <td>(670 000 $)</td>
+            </tr>
+           
+           <tr>
+            <td><span class="glyphicon glyphicon-chevron-down"></span></td>
+            <td><a href="#">Paysagement</a></td>
+            <td><div class="progress">
+                  <div class="progress-bar progress-bar-warning" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 50%">1
+                  </div>
+                  <div class="progress-bar progress-bar-danger" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 50%">1
+                  </div>
+                </div>
+            </td>
+            <td>(76 000 $)</td>
+            </tr>
+            <tr class="active">
+              <td colspan="4">
+                <h4>Détails</h4>
+                <p><strong>Description : </strong>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. </p>
+                <div class="panel panel-default">
+                  <div class="panel-heading">Nivellage</div>
+                  <table class="table">
+                    <tr><th>Opérateur</th><th>Mise</th></tr>
+                    <tr><td>Terrassement Girard inc.</td><td>76 000$</td><td><a href="#">Voir offre</a></tr>
+                    <tr><td>Paysage ABC inc.</td><td>96 000$</td><td><a href="#">Voir offre</a></tr>
+                  </table>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">Reboisement paysager</div>
+                  <div class="panel-body text-center text-muted">Aucun contrat</div>
+                </div>
+                  
+                  
+              </td>
+              </tr>
+           <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Ceuillette</a></td>
+            <td><div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 60%">6
+                  </div>
+                  <div class="progress-bar progress-bar-warning" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 10%">1
+                  </div>
+                  <div class="progress-bar progress-bar-danger" role="progressbar"
+                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                        style="width: 30%">3
+                  </div>
+                </div>
+            </td>
+            <td>(670 000 $)</td>
+            </tr>
+          </table>
+          
+          </div>
+          
+          <h3>Ventes</h3>
+          <p>
+          Les couleurs dans cette section indiquent : 
+          <ul>
+            <li>En vert : Les ventes réalisés jusqu'à maintenant</li>
+            <li>En rouge : Les ventes à faire pour atteindre le seuil de 
+            rentabilité préalable fixé. </li>
+            <li>En blanc : Les ventes possibles à réaliser sur le total 
+            disponible de la ressource. </li>
+          </ul>
+          <div class="panel panel-default">
+          <table class="table">
+						<tr>
+							<th></th>
+							<th>Produit</th>
+							<th>Prix</th>
+							<th>Progression ventes</th>
+							<th>Total</th>
+						</tr>
+						<tr>
+							<td><span class="glyphicon glyphicon-chevron-right"></span></td>
+							<td><a href="#">Épinette (billes)</a></td>
+							<td>10 $ / m<sup>3</sup>
+							</td>
+							<td><div class="progress">
+									<div class="progress-bar progress-bar-success"
+										role="progressbar" aria-valuenow="40" aria-valuemin="0"
+										aria-valuemax="100" style="width: 60%">30 000</div>
+
+									<div class="progress-bar progress-bar-danger"
+										role="progressbar" aria-valuenow="40" aria-valuemin="0"
+										aria-valuemax="100" style="width: 10%"></div>
+										<div class="progress-bar" role="progressbar" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 30%">12 000</div>
+								</div>
+								</td>
+							<td>1 277 000 $</td>
+						</tr>
+
+						<tr>
+							<td><span class="glyphicon glyphicon-chevron-right"></span></td>
+							<td><a href="#">Érables</a></td>
+							<td>1200 $ / arbres
+							</td>
+							<td><div class="progress">
+									<div class="progress-bar progress-bar-success"
+										role="progressbar" aria-valuenow="40" aria-valuemin="0"
+										aria-valuemax="100" style="width: 3%"></div>
+
+									<div class="progress-bar progress-bar-danger"
+										role="progressbar" aria-valuenow="40" aria-valuemin="0"
+										aria-valuemax="100" style="width: 70%">45</div>
+									<div class="progress-bar" role="progressbar" aria-valuenow="0"
+										aria-valuemin="0" aria-valuemax="100" style="width: 10%">10</div>
+								</div></td>
+							<td>1 200 $</td>
+						</tr>
+					
+            <tr>
+              <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+              <td><a href="#">Biomasse</a></td>
+              <td>4 $ / tonne
+              </td>
+              <td><div class="progress">
+                  <div class="progress-bar progress-bar-success"
+                    role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                    aria-valuemax="100" style="width: 100%">102 100</div>
+                </div></td>
+              <td>408 400 $</td>
+            </tr>
+					</table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <div class="text-center text-muted" style="padding-bottom:60px;">&copy; 2014 Forest Market beta</div>
+</body>
+</html>
+

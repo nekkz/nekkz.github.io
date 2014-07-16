@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Forest market WebApp</title>
+
+		<link href="./assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+		<script type="text/javascript" src="./assets/lib/bootstrap/js/bootstrap.js"></script>
+	</head>
+	<body>
+	  <nav class="navbar navbar-default" role="navigation">
+	    <div class="container">
+	      <!-- Brand and toggle get grouped for better mobile display -->
+	      <div class="navbar-header">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse"
+	          data-target="#bs-example-navbar-collapse-1">
+	          <span class="sr-only">Toggle navigation</span> <span
+	            class="icon-bar"></span> <span class="icon-bar"></span> <span
+	            class="icon-bar"></span>
+	        </button>
+	        
+	        <a class="navbar-brand" href="./login.html">Forest Market</a>
+	        <span class="text-warning">Vue opérateur de travaux forestiers</span>
+	        
+	        <ul class="nav navbar-nav ">
+          <li>
+            <div class="btn-group navbar-form">
+              <button type="button" class="btn btn-default active"><span class="glyphicon glyphicon-tree-conifer"></span></button>
+              <button type="button" class="btn btn-default "><span class="glyphicon glyphicon-road"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-picture"></span></button>
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-large"></span></button>
+            </div>
+          </li>
+        </ul>
+	      </div>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><form class="navbar-form navbar-left">
+	            <button type="submit" class="btn btn-default">Quitter</button>
+	          </form></li>
+	      </ul>
+	    </div>
+	  </nav>
+	
+	  <div class="container">
+	    <ul class="nav nav-tabs" role="tablist">
+	      <li><a href="oper-dashboard-main.html"><span
+	          class="glyphicon glyphicon-home"></span></a></li>
+	      <li class="active"><a href="oper-market.html">Marché</a></li>
+	      <li><a href="#">Réseau</a></li>
+	      <li><a href="#">Profil</a></li>
+	    </ul>
+	    <div class="row">
+	      <div class="col-lg-2">
+	        <h2>Filtres</h2>
+	        <h3>Date active</h3>
+
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="#"> Début 10/10/2014<span aria-hidden="true"	class="close">&times;</span></a></li>
+						<li><a href="#"> Fin 10/10/2014<span aria-hidden="true"	class="close">&times;</span></a></li>
+					</ul>
+					
+					<h3>Secteurs</h3>
+					<ul class="nav nav-pills nav-stacked">
+            <li><a href="#"> La tuque<span aria-hidden="true" class="close">&times;</span></a></li>
+            <li><a href="#"> Saguenay<span aria-hidden="true" class="close">&times;</span></a></li>
+						
+				</ul>
+				<div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">+</button>
+      </span>
+    </div><!-- /input-group -->
+
+			</div>
+	      
+	      <div class="col-lg-10">
+	        <h2>Contrats d'opération de service forestier </h2>
+	        
+	        <div class="panel panel-default">
+
+          <table class="table table-striped">
+           <tr>
+            <th></th>
+            <th>Description</th>
+            <th>Secteur</th>
+            <th>Volume</th>
+            <th>Unité</th>
+            <th>Indice</th>
+            <th colspan="13">Période active</th>
+           </tr>
+           <tr>
+            <th colspan="6"></th>
+            <th>J</th><th>F</th><th>M</th><th>A</th><th>M</th><th>J</th><th>J</th><th>A</th><th>S</th><th>O</th><th>N</th><th>D</th><th></th>
+           </tr>
+           
+           <!-- Entrée #1 -->
+           <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Récolte de bois<br/></a></td>
+            <td>La tuque</td>
+            <td>2500</td><td>tonnes</td><td>Plat</td>
+            <td colspan="12">
+              <div class="progress">
+						    <div class="progress-bar progress-bar-success" role="progressbar"
+						      aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+						      style="margin-left: 8.33%; width: 66.66%">
+						    </div>
+						  </div>
+            </td>
+            <td><button class="btn btn-xs btn-success">Proposer</button></td>
+            </tr>
+            <!-- Entrée #2 -->
+            <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Récolte de bois</a></td>
+            <td>La tuque</td>
+            <td>25</td><td>tonnes</td><td>Plat</td>
+            <td colspan="12">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                  style="margin-left: 12%; width: 25%">
+                </div>
+              </div>
+            </td>
+            <td><button class="btn btn-xs btn-success">Proposer</button></td>
+            </tr>
+            
+            <!-- Entrée #3 -->
+            <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Récolte de bois</a></td>
+            <td>Saguenay</td>
+            <td>10000</td><td>m<sup>3</sup></td><td>Montagne</td>
+            <td colspan="12">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                  style="margin-left: 28%; width: 32%">
+                </div>
+              </div>
+            </td>
+            <td><button class="btn btn-xs btn-success">Proposer</button></td>
+            </tr>
+            
+            <!-- Entrée #4 -->
+            <tr>
+            <td><span class="glyphicon glyphicon-chevron-down"></span></td>
+            <td><a href="#">Récolte de bois</a></td>
+            <td>Saguenay</td>
+            <td>7</td><td>m<sup>3</sup></td><td>Tourbière</td>
+            <td colspan="12">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                  style="margin-left: 30%; width: 50%">
+                </div>
+              </div>
+            </td>
+            <td><button class="btn btn-xs btn-success">Proposer</button></td>
+            </tr>
+            
+            <tr class="active">
+              <td colspan="6" style="padding-bottom: 3#em;">
+                <h4>Détails</h4>
+                <p><strong>Intégrateur : </strong><a href="#">David et Michel Intégrateurs inc.</a></p>
+						    <p><strong>Dates enchères :</strong> 6 janvier 2014 au 17 février 2014</p> 
+								<p><strong>Dates validité :</strong> 2 avril 2014 au 15 septembre 2014</p>
+								<p>
+									<strong>Informations supplémentaires : </strong> Lorem ipsum
+									dolor sit amet, consectetur adipiscing elit. Donec a diam
+									lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac
+									quam viverra nec consectetur ante hendrerit. Donec et mollis
+									dolor.
+								</p>
+
+							</td>
+							<td colspan="13" style="padding-bottom: 3em;">
+								<h4>Communications</h4>
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="media">
+											<div class="media-body">
+												<h4 class="media-heading">Vous</h4>
+												Dans quel secteur exactement ?
+											</div>
+										</div>
+										<div class="media">
+                      <div class="media-body">
+                        <h4 class="media-heading">Price consolidated inc.</h4>
+                        Ce serait dans le secteur d'Alma. Merci
+                      </div>
+                    </div>
+									</div>
+								</div>
+
+								<div class="input-group">
+									<input type="text" class="form-control"><span
+										class="input-group-btn">
+										<button class="btn btn-default" type="button">Envoyer</button>
+									</span>
+								</div>
+							</td>
+						</tr>
+            
+            
+            <!-- Entrée #5 -->
+            <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Récolte de bois</a></td>
+            <td>Saguenay</td>
+            <td>18</td><td>m<sup>3</sup></td><td>Plat</td>
+            <td colspan="12">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                  style="margin-left: 10%; width: 70%">
+                </div>
+              </div>
+            </td>
+            <td><button class="btn btn-xs btn-success">Proposer</button></td>
+            </tr>
+            
+            <!-- Entrée #6 -->
+            <tr>
+            <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+            <td><a href="#">Récolte de bois</a></td>
+            <td>Saguenay</td>
+            <td>8</td><td>m<sup>3</sup></td><td>Montagne</td>
+            <td colspan="12">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                  style="margin-left: 35%; width: 60%">
+                </div>
+              </div>
+            </td>
+            <td><button class="btn btn-xs btn-success">Proposer</button></td>
+            </tr>
+          </table>
+        </div>
+	        
+	      </div>
+	    </div>
+	  </div>
+
+	
+
+</body>
+</html>
+
